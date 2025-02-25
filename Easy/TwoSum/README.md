@@ -11,7 +11,7 @@ for each element in input array
             create a new array
             return array
 ```
-## Initial Thoughts - time better than O(n)?
+## Initial Thoughts - time better than O(n^2)?
 - utilized an unorderd map to find a complement
 - the complement is defined at each step by the current value at index [i] of nums - target
 - if the value exists, then return the indices
