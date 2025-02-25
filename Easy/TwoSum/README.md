@@ -12,3 +12,6 @@ for each element in input array
             return array
 ```
 ## Initial Thoughts - time better than O(n)?
+- utilized an unorderd map to find a complement
+- the complement is defined at each step by the current value at index [i] of nums - target
+- if the value exists, then return the indices

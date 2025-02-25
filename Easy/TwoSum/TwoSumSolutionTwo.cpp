@@ -26,16 +26,19 @@ class Solution
 public:
     vector<int> twoSum(vector<int> &nums, int target)
     {
-        for (int i = 0; i < nums.size(); i++)
-        { // first iteration over
-            for (int j = i + 1; j < nums.size(); j++)
-            { // second iteration over
-                // ensure j > i to avoid duplication
-                if (nums[i] + nums[j] == target)
-                { // check if target is current sum
-                    return {i, j};
-                }
+        unordered_map<int, int> numberMap; // stores {number, index}
+        vector<int> outputArray;
+
+        for (int i = 0; i < nums.size(); i++) {
+            int complement = target - nums[i];
+
+            // if complement exists in the map, return the indices
+            if (numberMap.find(complement) != numberMap.end()) {
+                return {numberMap[complement], i};
             }
+
+            // store the current number's index
+            numberMap[nums[i]] = i;
         }
         return {}; // return empty vector if no pair is found
     }
