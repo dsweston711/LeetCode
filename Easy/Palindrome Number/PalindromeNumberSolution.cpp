@@ -25,11 +25,12 @@ class Solution
 
     bool numberCheck(vector<int> &digits)
     {
-        for (int i = 0; i < (digits.size() / 2) - 1; i++)
+        for (int i = 0; i < (digits.size() / 2) - 1; ++i)
         {
             int currentIndex = i;
             int complementIndex = (digits.size() - 1) - currentIndex;
-            if (digits[currentIndex] != digits[complementIndex]) { // if the two numbers on each end dont match
+            if (digits[currentIndex] != digits[complementIndex])
+            { // if the two numbers on each end dont match
                 return false;
             }
         }
@@ -54,5 +55,7 @@ public:
         // case 3a: integer has an even number of digits
         if (digits.size() % 2 == 0)
             return numberCheck(digits);
+
+        return false; // it should never reach here
     }
 };
