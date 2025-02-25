@@ -15,3 +15,5 @@ for each element in input array
 - utilized an unorderd map to find a complement
 - the complement is defined at each step by the current value at index [i] of nums - target
 - if the value exists, then return the indices
+- its important to note that underlying structure is a hashmap
+- for more information, see [unordered_map in C++ STL](https://www.geeksforgeeks.org/unordered_map-in-cpp-stl/)
