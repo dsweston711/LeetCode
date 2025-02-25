@@ -1,4 +1,6 @@
 #include <vector>
+#include <algorithm> // need to include this for std::reverse
+#include <iostream>
 
 using namespace std;
 
@@ -15,6 +17,12 @@ class Solution
         }
 
         reverse(digits.begin(), digits.end());
+        // for (int i = 0; i < (int)digits.size(); i++)
+        //{
+        //     cout << digits[i];
+        // }
+        //  cout << endl;
+        //  cout << flush;
         return digits;
     }
 
@@ -25,12 +33,15 @@ class Solution
 
     bool numberCheck(vector<int> &digits)
     {
-        for (int i = 0; i < (digits.size() / 2) - 1; ++i)
+        // cout << "Number of digits: " << digits.size() << endl;
+        // cout << "Checking number of iterations: " << digits.size() / 2 << endl;
+        for (int i = 0; i < (digits.size() / 2); ++i) // fixed loop condition
         {
-            int currentIndex = i;
-            int complementIndex = (digits.size() - 1) - currentIndex;
-            if (digits[currentIndex] != digits[complementIndex])
+            int complementIndex = (digits.size() - 1) - i;
+            // cout << "Comparing: " << digits[i] << " and " << digits[complementIndex] << endl;
+            if (digits[i] != digits[complementIndex])
             { // if the two numbers on each end dont match
+                // cout << "Mismatch at indices: " << i << " and " << complementIndex << endl;
                 return false;
             }
         }
@@ -40,22 +51,53 @@ class Solution
 public:
     bool isPalindrome(int x)
     {
+        // cout << "Entered isPalindrome() with x = " << x << endl;
+
         // case 1: integer is negative
         if (x < 0)
+        {
+            // cout << "false\n";
             return false;
+        }
 
         // case 2: integer is 1 digit
         if (x < 10 && x >= 0)
+        {
+            // cout << "true\n";
             return true;
+        }
 
         // previous cases could be checked without parsing
         // parse input into vector
         vector<int> digits = parseDigits(x);
 
         // case 3a: integer has an even number of digits
-        if (digits.size() % 2 == 0)
-            return numberCheck(digits);
+        /*
+         *if (digits.size() % 2 == 0) {
+         *    // return numberCheck(digits);
+         *    cout << "Calling numberCheck..." << endl;
+         *    if (numberCheck(digits)) {
+         *        cout << "true" << flush;
+         *    } else {
+         *        cout << "false" << flush;
+         *    }
+         *}
+         */
+
+        //  ^ this has caused me so much headache
+        // note to self remove all remnants of old though process if its obsolete
+        // god dammit
+
+        return numberCheck(digits);
 
         return false; // it should never reach here
     }
 };
+
+/* int main()
+ *{
+ *    Solution sol;
+ *    cout << sol.isPalindrome(121) << endl;
+ *    return 0;
+ *}
+ */
