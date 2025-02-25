@@ -11,8 +11,4 @@ for each element in input array
             create a new array
             return array
 ```
-<<<<<<< HEAD
-
 ## Initial Thoughts - time better than O(n)?
-=======
->>>>>>> 928d9ff1c24c62e6ce175803f28db920e98a6316
