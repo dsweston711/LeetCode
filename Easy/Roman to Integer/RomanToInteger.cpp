@@ -9,3 +9,9 @@ public:
         
     }
 };
+
+int main() {
+    Solution sol;
+    sol.romanToInt("I");
+    return 0;
+}
