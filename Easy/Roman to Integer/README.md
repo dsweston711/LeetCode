@@ -31,3 +31,10 @@ perhaps we can represent the conversion as a set of binary trees, where we exami
                             IV
 but then that requires we make a tree for every possible starting point...
 
+
+ too much work. also read the write up again, theres only 6 instances where subtraction is used (assuming valid input).
+
+ parse the string into a vector
+ loop through it
+ if (any of the 6 statments, checking current letter and current letter + 1)
+- perform corresponding subtraction, move onto current letter + 2.
