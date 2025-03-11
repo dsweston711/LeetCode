@@ -1,7 +1,7 @@
 using namespace std;
 
 struct ListNode {
-     int val;
+     int val; // value of node
      ListNode *next; // ptr to next node
 
      // constructors
@@ -14,10 +14,11 @@ class Solution {
 
     int addTwoNumbersRecursiveFunction(int factor, ListNode* currentNode) {
 
-        ListNode *nextNode = currentNode->next;
+        ListNode *nextNode = currentNode->next; // ptr to next node
 
         //TODO
         // base case : next node is null (check pointer?)
+        if (nextNode == nullptr) { return currentNode->val; }
 
         return currentNode->val + addTwoNumbersRecursiveFunction((factor*10), nextNode);
     }
