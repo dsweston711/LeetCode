@@ -1,13 +1,18 @@
 #include <vector>
 using namespace std;
-
-std::vector<int> dp(1000, -1); // large array w -1 (not yet computed)
-
-class Solution {
-    public:
-        int fib(int n) {
-            if ( n <= 1) return n;
-            if (dp[n] != -1) return dp[n]; // if already solved, return stored answer
-            return dp[n] = fib(n-1) + fib(n-2);
+class Solution
+{
+public:
+    int fib(int n)
+    {
+        if (n <= 1)
+            return n;
+        std::vector<int> dp(n + 1);
+        dp[1] = 1;
+        for (int i = 2; i <= n; i++)
+        {
+            dp[i] = dp[i - 1] + dp[i - 2];
         }
-    };
+        return dp[n];
+    }
+};
