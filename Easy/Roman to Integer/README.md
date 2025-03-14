@@ -38,3 +38,13 @@ but then that requires we make a tree for every possible starting point...
  loop through it
  if (any of the 6 statments, checking current letter and current letter + 1)
 - perform corresponding subtraction, move onto current letter + 2.
+
+---
+
+returning to this problem after a week or so, i think the biggest issue is parsing the input. at least, i thought it was. but after thinking about it... when does this ever happen: CIV (104) and IV doesn't mean 4? theres no input before V that would make it otherwise or mess things up.
+
+so for every subtraction, just check the previous letter and see if subtraction is in order.
+
+perhaps we can do this recursively? that may complicate things too much. I might just parse the entire input string into a vector and iterate over it, checking cases each time.
+
+just found out about the fact that C++ can directly convert a string into a vector of characters. nice.
