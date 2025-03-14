@@ -18,4 +18,4 @@ currently cant think of a better solution, given we dont know the size and rathe
 
 just checked the desired output... again. ive been approaching this wrong. we directly compare each value since both lists are in reverse and the output will be in reverse, construct the list as we go. this will probably be done recursively.
 
-addendum: after letting it roll around in my head for a while, i decided to use a recursive function. qutie happy with this implementation. comments in the code are sufficient i believe.
+addendum: after letting it roll around in my head for a while, i decided to use a recursive function. quite happy with this implementation. comments in the code are sufficient i believe.
