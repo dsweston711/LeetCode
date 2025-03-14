@@ -86,7 +86,6 @@ public:
 
         //  ^ this has caused me so much headache
         // note to self remove all remnants of old though process if its obsolete
-        // god dammit
 
         return numberCheck(digits);
 
