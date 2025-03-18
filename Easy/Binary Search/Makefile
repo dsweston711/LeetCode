@@ -1,6 +1,6 @@
 CXX = g++
 CXXFLAGS = -Wall -Wextra -std=c++17
-TARGET = interleaving_string
+TARGET = binary_search
 SRC = $(TARGET).cpp
 OBJ = $(TARGET).o
 

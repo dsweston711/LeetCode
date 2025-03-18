@@ -1,6 +1,6 @@
 CXX = g++
 CXXFLAGS = -Wall -Wextra -std=c++17
-TARGET = add_two_numbers
+TARGET = median_of_two_sorted_arrays
 SRC = $(TARGET).cpp
 OBJ = $(TARGET).o
 
