@@ -30,4 +30,4 @@ This repo reflects focused algorithmic training and problem decomposition using 
 
 > Note: Some problems are still in progress or missing writeups. This repository is updated over time as I revisit or re-implement solutions.
 
-[Link to LeetCode profile](https://leetcode.com/u/6q4joByrDaHExhSp/)
+[View my LeetCode profile](https://leetcode.com/u/6q4joByrDaHExhSp/)
