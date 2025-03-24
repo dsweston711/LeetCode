@@ -32,7 +32,7 @@ public:
 
         for (int num : arr1)
         {
-            string s = to_string(num); // convery the number to a string
+            string s = to_string(num); // convert the number to a string
             string prefix = "";
 
             // build prefixes from left to right
