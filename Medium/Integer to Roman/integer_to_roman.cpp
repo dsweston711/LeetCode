@@ -4,8 +4,10 @@
 
 using namespace std;
 
-class Solution {
-    public:
-        string intToRoman(int num) {
-        }
-    };
+class Solution
+{
+public:
+    string intToRoman(int num)
+    {
+    }
+};
