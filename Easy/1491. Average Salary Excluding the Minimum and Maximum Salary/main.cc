@@ -1,5 +1,6 @@
 #include <vector>
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
@@ -8,42 +9,15 @@ class Solution
 public:
     double average(vector<int> &salary)
     {
-        double calculated_average = 0;    // calculated average
-        int min = INT_MAX;                // minimum value found
-        int max = INT_MIN;                // maximum value found
-        double total = 0;                 // sum of all values
-        double n = (double)salary.size(); // size of array
+        int sum = 0;
 
-        // iterate once over salaries
-        for (int i = 0; i < (int)salary.size(); i++)
+        sort(salary.begin(), salary.end());
+        for (int i = 1; i < salary.size() - 1; i++)
         {
-            // check for minimum and maximum
-            if (salary[i] < min)
-            {
-                min = salary[i];
-            }
-
-            if (salary[i] > max)
-            {
-                max = salary[i];
-            }
-
-            // sum all values
-            total += salary[i];
-            cout << total << endl;
+            sum += salary[i];
         }
 
-        cout << max << endl;
-
-        cout << min << endl;
-
-        total = total - min - max;
-
-        cout << total << endl;
-
-        calculated_average = total / (n - 2);
-
-        return calculated_average;
+        return (double)sum / (double)(salary.size() - 2);
     }
 };
 
