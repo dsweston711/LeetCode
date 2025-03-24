@@ -26,9 +26,11 @@ public:
             cout << str << endl;
         }
 
+        // "dp" table; save previous prefix strings
         dp[0] = strs[0];
         cout << dp[0] << endl;
 
+        // set i to 0 at first, oops
         for (int i = 1; i < (int)strs.size(); ++i)
         {
             dp[i] = getPrefix(dp[i - 1], strs[i]);
