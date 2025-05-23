@@ -5,7 +5,8 @@ Runtime of O(log (m+n)). We don't need to make the new merged array - we just ne
 So we can have odd-length medians:
 
 ```[1,3], [2]
-median is 2```
+median is 2
+```
 
 even-length medians:
 
