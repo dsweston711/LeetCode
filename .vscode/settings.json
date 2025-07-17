@@ -58,6 +58,16 @@
     "string": "cpp",
     "array": "cpp",
     "string_view": "cpp",
-    "span": "cpp"
+    "span": "cpp",
+    "cstdarg": "cpp",
+    "cwctype": "cpp",
+    "deque": "cpp",
+    "unordered_set": "cpp",
+    "functional": "cpp",
+    "memory_resource": "cpp",
+    "random": "cpp",
+    "numbers": "cpp",
+    "text_encoding": "cpp",
+    "variant": "cpp"
   }
 }
